@@ -1,21 +1,23 @@
 ### Get page
 GET http://localhost:3000/
 
-### Get all objects
+### Get all objects in api
 GET http://localhost:3000/api
 
 
-### Add a new creature
+### Post a new object
 POST http://localhost:3000/api
 Content-Type: application/json
 
 {
-    "name": "Dog"
+    "name": "Dove",
+    "extinct": false,
+    taxonomy: "Columbiformes"
 }
 
-### Delete a creature
+### Delete an object
 DELETE http://localhost:3000/
 
-### Update a creature
-PUT http://localhost:3000/
+### Change an object
+PUT http://localhost:3000/api/id
 
