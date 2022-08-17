@@ -1,0 +1,21 @@
+### Get page
+GET http://localhost:3000/
+
+### Get all objects
+GET http://localhost:3000/api
+
+
+### Add a new creature
+POST http://localhost:3000/api
+Content-Type: application/json
+
+{
+    "name": "Dog"
+}
+
+### Delete a creature
+DELETE http://localhost:3000/
+
+### Update a creature
+PUT http://localhost:3000/
+
