@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/server.js",
     "build": "tsc",
-    "dev": "nodemon src/server.ts"
+    "check": "tsc --noEmit",
+    "dev": "nodemon --transpile-only src/server.ts"
   },
   "author": "Daniel Toresson",
   "license": "ISC",
