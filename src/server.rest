@@ -1,23 +1,28 @@
 ### Get page
-GET http://localhost:3000/
+GET http://localhost:3000/api/animals
 
 ### Get all objects in api
-GET http://localhost:3000/api
+GET http://localhost:3000/api/animals
 
 
 ### Post a new object
-POST http://localhost:3000/api
+POST http://localhost:3000/api/animals
 Content-Type: application/json
 
 {
     "name": "Dove",
     "extinct": false,
-    taxonomy: "Columbiformes"
+    "taxonomy": "Columbiformes"
 }
 
 ### Delete an object
-DELETE http://localhost:3000/
+DELETE http://localhost:3000/api/animals/1
 
 ### Change an object
-PUT http://localhost:3000/api/id
+PUT http://localhost:3000/api/animals/1
+Content-Type: application/json
+
+{
+    
+}
 
