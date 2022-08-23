@@ -1,18 +1,16 @@
 ### Get page
 GET http://localhost:3000/api/animals
 
-### Get all objects in api
-GET http://localhost:3000/api/animals
-
-
 ### Post a new object
 POST http://localhost:3000/api/animals
 Content-Type: application/json
 
 {
+    "id": "4",
     "name": "Dove",
     "extinct": false,
-    "taxonomy": "Columbiformes"
+    "taxonomy": "Columbiformes",
+    "funtimetest": "LUL"
 }
 
 ### Delete an object
@@ -23,6 +21,11 @@ PUT http://localhost:3000/api/animals/1
 Content-Type: application/json
 
 {
-    
+    "id": "2",
+    "name": "Renamed Dog",
+    "extinct": false,
+    "taxonomy": "Edited",
+    "petname": "Borker",
+    "age": 5
 }
 

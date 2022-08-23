@@ -1,4 +1,8 @@
+import Joi from "joi";
+import nanoid from "nanoid";
+
 interface Animal {
+  id: string;
   name: string;
   extinct: boolean;
   taxonomy: string;
@@ -14,9 +18,17 @@ interface Monkey extends Animal {
   likestoswing: boolean;
 }
 
+export const animalSchema = Joi.object<Animal, true>({
+  id: Joi.string().required(),
+  name: Joi.string().required().min(2),
+  extinct: Joi.boolean().required(),
+  taxonomy: Joi.string().required().min(2),
+});
+
 export let animals: Animal[] = [];
 
 let monkey1: Monkey = {
+  id: "1",
   name: "Nisse",
   extinct: false,
   taxonomy: "Hominidae gray",
@@ -25,6 +37,7 @@ let monkey1: Monkey = {
 };
 
 let dog1: Dog = {
+  id: "2",
   name: "Dog",
   extinct: false,
   taxonomy: "Canis lupus familiaris",
