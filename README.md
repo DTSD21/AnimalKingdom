@@ -13,6 +13,8 @@ Project goals (in Swedish) below, checked boxes indicates goal has been complete
 
 To test run the project, enter npm run dev in your IDE terminal of choice.
 
+Project's GitHub page: https://github.com/DTSD21/AnimalKingdom
+
 1. Projektet innehåller minst 4 st. endpoints (GET, POST, PUT & DELETE för en resurs) [x]
 2. Samtliga endpoints skall kunna nås via en REST Client fil (.rest|.http) [x]
 3. Data som API:et hanterar sparas lokalt i serverfilen [x]
