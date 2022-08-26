@@ -11,6 +11,6 @@ const animalRouter = express.Router();
 animalRouter.get("/", getAllAnimals);
 animalRouter.post("/", joiValidateBody, createAnimal);
 animalRouter.delete("/:id", deleteAnimal);
-animalRouter.put(":/id", updateAnimal);
+animalRouter.put("/:id", updateAnimal);
 
 export default animalRouter;

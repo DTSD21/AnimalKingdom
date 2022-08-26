@@ -1,4 +1,4 @@
-### Get page
+### Get
 GET http://localhost:3000/api/animals
 
 ### Post a new object
@@ -6,26 +6,23 @@ POST http://localhost:3000/api/animals
 Content-Type: application/json
 
 {
-    "id": "4",
+    "id": "1",
     "name": "Dove",
     "extinct": false,
-    "taxonomy": "Columbiformes",
-    "funtimetest": "LUL"
+    "taxonomy": "Columbiformes"
 }
 
-### Delete an object
-DELETE http://localhost:3000/api/animals/1
+### Delete
+DELETE http://localhost:3000/api/animals/deletionExample
 
-### Change an object
+### Update
 PUT http://localhost:3000/api/animals/1
 Content-Type: application/json
 
 {
-    "id": "2",
-    "name": "Renamed Dog",
+    "id": "1",
+    "name": "White-billed crow",
     "extinct": false,
-    "taxonomy": "Edited",
-    "petname": "Borker",
-    "age": 5
+    "taxonomy": "Corvus woodfordi"
 }
 

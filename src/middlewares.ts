@@ -11,5 +11,5 @@ export const errorHandler = (err: Error, req: Request, res: Response, next: Next
 };
 
 export const notFoundHandler = (req: Request, res: Response, next: NextFunction) => {
-  res.status(404).json("Resource does not exist! Wow!");
+  res.status(404).json("Resource does not exist!");
 };

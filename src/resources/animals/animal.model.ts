@@ -1,5 +1,5 @@
 import Joi from "joi";
-import nanoid from "nanoid";
+import { nanoid } from "nanoid";
 
 interface Animal {
   id: string;
@@ -27,8 +27,15 @@ export const animalSchema = Joi.object<Animal, true>({
 
 export let animals: Animal[] = [];
 
+let crow: Animal = {
+  id: nanoid(10),
+  name: "Crow",
+  extinct: false,
+  taxonomy: "Corvidae",
+};
+
 let monkey1: Monkey = {
-  id: "1",
+  id: nanoid(10),
   name: "Nisse",
   extinct: false,
   taxonomy: "Hominidae gray",
@@ -37,7 +44,7 @@ let monkey1: Monkey = {
 };
 
 let dog1: Dog = {
-  id: "2",
+  id: nanoid(10),
   name: "Dog",
   extinct: false,
   taxonomy: "Canis lupus familiaris",
@@ -45,5 +52,14 @@ let dog1: Dog = {
   age: 12,
 };
 
+let cow: Animal = {
+  id: "deletionExample",
+  name: "Cow",
+  extinct: false,
+  taxonomy: "Bos taurus",
+};
+
+animals.push(crow);
 animals.push(monkey1);
 animals.push(dog1);
+animals.push(cow);
