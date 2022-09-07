@@ -6,7 +6,6 @@ POST http://localhost:3000/api/animals
 Content-Type: application/json
 
 {
-    "id": "1",
     "name": "Dove",
     "extinct": false,
     "taxonomy": "Columbiformes"
@@ -16,11 +15,11 @@ Content-Type: application/json
 DELETE http://localhost:3000/api/animals/deletionExample
 
 ### Update
-PUT http://localhost:3000/api/animals/1
+PUT http://localhost:3000/api/animals/updateExample
 Content-Type: application/json
 
 {
-    "id": "1",
+    "id": "updateExample", 
     "name": "White-billed crow",
     "extinct": false,
     "taxonomy": "Corvus woodfordi"

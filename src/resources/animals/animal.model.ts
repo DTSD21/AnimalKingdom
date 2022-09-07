@@ -59,7 +59,15 @@ let cow: Animal = {
   taxonomy: "Bos taurus",
 };
 
+let donkey: Animal = {
+  id: "updateExample",
+  name: "Donkey",
+  extinct: false,
+  taxonomy: "Equidae Gray",
+};
+
 animals.push(crow);
 animals.push(monkey1);
 animals.push(dog1);
 animals.push(cow);
+animals.push(donkey);

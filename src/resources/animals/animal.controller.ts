@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from "express";
+import { nanoid } from "nanoid";
 import { animals, animalSchema } from "./animal.model";
 
 export const createAnimal = (req: Request, res: Response) => {
@@ -33,6 +34,14 @@ export const deleteAnimal = (req: Request, res: Response) => {
   } else {
     animals.splice(indexOfObject, 1);
     res.status(204).json(null);
+  }
+};
+
+export const generateId = (req: Request, res: Response, next: NextFunction) => {
+  if (req.body.id != null) res.status(400).json("No id:s of your own allowed!");
+  else {
+    req.body.id = nanoid(10);
+    next();
   }
 };
 

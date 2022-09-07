@@ -2,6 +2,7 @@ import express from "express";
 import {
   createAnimal,
   deleteAnimal,
+  generateId,
   getAllAnimals,
   joiValidateBody,
   updateAnimal,
@@ -9,7 +10,7 @@ import {
 
 const animalRouter = express.Router();
 animalRouter.get("/", getAllAnimals);
-animalRouter.post("/", joiValidateBody, createAnimal);
+animalRouter.post("/", generateId, joiValidateBody, createAnimal);
 animalRouter.delete("/:id", deleteAnimal);
 animalRouter.put("/:id", updateAnimal);
 
